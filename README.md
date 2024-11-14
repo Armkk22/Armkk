@@ -167,6 +167,39 @@ Authentication
 
 ![image](https://github.com/user-attachments/assets/f792ff03-b851-42ca-8d21-443e06ee123a)
 
+Захом в connection там где мы писали http://prometheus:9090 пишем http://victoriametrics:8428 И заменяем имя из "Prometheus-2" в "Vika" нажимаем на dashboards add visualition выбираем "Vika" снизу меняем на "code" Переходим в терминал и пишем
+
+        echo -e "# TYPE OILCOINT_metric1 gauge\nOILCOINT_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus
+        
+команда отправляет бинарные данные (например, метрики в формате Prometheus) на локальный сервер, который слушает на порту 8428
+        
+        curl -G 'http://localhost:8428/api/v1/query' --data-urlencode 'query=OILCOINT_metric1'
+
+команда делает запрос к API для получения данных по метрике OILCOINT_metric1
+
+команда выводит текст, который может быть использован для определения метрики в формате, совместимом с Prometheus
+
+команда выводит информацию о типе и значении этой метрики в формате, который может быть использован системой мониторинга Prometheus
+
+Копируем переменную OILCOINT_metric1 и вставляем в query
+
+Нажимаем run
+
+![image](https://github.com/user-attachments/assets/086374d7-e475-421b-a268-e407f05a7af3)
+![image](https://github.com/user-attachments/assets/0a0ffa36-e5ef-4c42-b310-9ae3230f2502)
+
+Копируем переменную OILCOINT_metric1 и вставляем в code
+
+![image](https://github.com/user-attachments/assets/0637c019-3491-4d72-8000-baa94637e034)
+
+
+
+
+
+
+
+
+
 
 
 
