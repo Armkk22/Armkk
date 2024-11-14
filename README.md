@@ -153,6 +153,21 @@ Authentication
 
 ![image](https://github.com/user-attachments/assets/0ace0208-192a-4a57-ae0a-be64da759c0e)
 
+Делаем VictoriaMetrics
+
+Для начала зайдем в нужную папку
+
+        cd grafana_stack_for_docker
+
+Открываем docker-compose
+
+        sudo vi docker-compose.yaml
+
+После prometheus вставляем vmagent (но у нас уже вставлен готовый докер)
+
+![image](https://github.com/user-attachments/assets/f792ff03-b851-42ca-8d21-443e06ee123a)
+
+
 
 
         
