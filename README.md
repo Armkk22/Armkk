@@ -123,6 +123,35 @@ Cоздаем папки двумя разными способами
 
 Делаем grafana на сайте
 
+переходим на сайт localhost:3000
+
+        User & Password GRAFANA: admin
+
+        Код графаны: 3000
+
+        Код прометеуса: http://prometheus:9090
+        
+в меню выбираем вкладку Dashboards и создаем Dashboard
+
+        ждем кнопку +Add visualization, а после "Configure a new data source"
+
+        выбираем Prometheus
+
+        Connection
+
+        http://prometheus:9090
+        
+Authentication
+
+        Basic authentication
+
+        User: admin
+
+        Password: admin
+
+        Нажимаем на Save & test и должно показывать зелёную галочку
+
+![image](https://github.com/user-attachments/assets/0ace0208-192a-4a57-ae0a-be64da759c0e)
 
 
 
